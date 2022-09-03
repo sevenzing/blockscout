@@ -7,7 +7,6 @@
 - [#6001](https://github.com/blockscout/blockscout/pull/6001) - Add ETHEREUM_JSONRPC_DISABLE_ARCHIVE_BALANCES env var that filters requests and query node only if the block quantity is "latest"
 - [#5944](https://github.com/blockscout/blockscout/pull/5944) - Add tab with state changes to transaction page
 
-
 ### Fixes
 
 - [#6038](https://github.com/blockscout/blockscout/pull/6038) - Extend token name from string to text type

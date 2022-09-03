@@ -4220,6 +4220,8 @@ defmodule Explorer.Chain do
 
   defp handle_paging_options(query, nil), do: query
 
+  defp handle_paging_options(query, %PagingOptions{key: nil, page_size: nil}), do: query
+
   defp handle_paging_options(query, paging_options) do
     query
     |> page_transaction(paging_options)

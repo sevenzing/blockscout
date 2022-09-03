@@ -4,8 +4,7 @@ defmodule BlockScoutWeb.TransactionStateView do
   alias Explorer.Chain
   alias Explorer.Chain.Wei
 
-  import BlockScoutWeb.TransactionStateController,
-    only: [from_loss: 1, to_profit: 1, miner_profit: 1]
+  import BlockScoutWeb.TransactionStateController, only: [from_loss: 1, to_profit: 1]
 
   def has_diff?(%Wei{value: val}) do
     not Decimal.eq?(val, Decimal.new(0))
@@ -32,7 +31,7 @@ defmodule BlockScoutWeb.TransactionStateView do
   end
 
   def has_state_changes?(tx) do
-    has_diff?(from_loss(tx)) or has_diff?(to_profit(tx)) or has_diff?(miner_profit(tx))
+    has_diff?(from_loss(tx)) or has_diff?(to_profit(tx))
   end
 
   def display_value(balance, :coin) do
